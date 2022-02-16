@@ -1,8 +1,10 @@
 void() locktime_touch =
 {
 		self.solid = SOLID_NOT;
-		if(other.raceTime)
+		if(other.raceTime){
 			dprint("Illogic! Race time is already set!");
+			return;
+		}
 		other.raceTime=time;
 		self.think = hurt_on;
 		self.nextthink = time + 1;
