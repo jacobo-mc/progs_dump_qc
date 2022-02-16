@@ -1817,3 +1817,24 @@ void() target_setcount = {
 	self.use = target_setcount_use;
 
 };
+void() locktime_touch =
+{
+		self.solid = SOLID_NOT;
+		if(other.raceTime){
+			dprint("Illogic! Race time is already set!");
+			return;
+		}
+		other.raceTime=time;
+		self.think = hurt_on;
+		self.nextthink = time + 1;
+		return;
+};
+
+/*QUAKED trigger_lockTime (.5 .5 .5) ?
+Any object touching this object will lock their race time for score purposes
+*/
+void() trigger_lockTime =
+{
+	InitTrigger ();
+	self.touch = locktime_touch;
+};
