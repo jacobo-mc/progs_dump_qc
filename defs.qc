@@ -190,8 +190,6 @@ void		end_sys_globals;		// flag for structure dumping
 
 .string		target;
 .string		targetname;
-
-.float raceTime
 // damage is accumulated through a frame. and sent as one single
 // message, so the super shotgun doesn't generate huge messages
 .float		dmg_take;
@@ -512,6 +510,8 @@ float	AS_TURRET		= 5;
 .float		bubble_count;	// keeps track of the number of bubbles
 .string		deathtype;		// keeps track of how the player died
 
+
+.float raceTime
 //
 // object stuff
 //
