@@ -2,16 +2,15 @@ void() locktime_touch =
 {
 		self.solid = SOLID_NOT;
 		if(other.raceTime)
-      dprint("Illogic! Race time is already set!");
-    other.raceTime=time;
+			dprint("Illogic! Race time is already set!");
+		other.raceTime=time;
 		self.think = hurt_on;
 		self.nextthink = time + 1;
-
-	return;
+		return;
 };
 
 /*QUAKED trigger_lockTime (.5 .5 .5) ?
-Any object touching this object lock the race time for score purposes
+Any object touching this object will lock their race time for score purposes
 */
 void() trigger_lockTime =
 {
