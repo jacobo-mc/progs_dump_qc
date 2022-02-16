@@ -1,6 +1,9 @@
 
 void() T_MissileTouch;
-void() info_player_start;
+void() info_player_start =
+{
+	clientstat(STAT_RACETIME, EV_FLOAT, raceTime);
+};
 void(entity targ, entity inflictor, entity attacker) ClientObituary;
 
 void() monster_death_use;
