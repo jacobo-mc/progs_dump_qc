@@ -191,6 +191,7 @@ void		end_sys_globals;		// flag for structure dumping
 .string		target;
 .string		targetname;
 
+.float raceTime
 // damage is accumulated through a frame. and sent as one single
 // message, so the super shotgun doesn't generate huge messages
 .float		dmg_take;
