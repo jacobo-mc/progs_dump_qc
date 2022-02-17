@@ -521,6 +521,9 @@ void() worldspawn =
 
 	// 63 testing
 	lightstyle(63, "a");
+	
+	//Add stats
+	clientstat(STAT_RACETIME, EV_FLOAT, raceTime);
 };
 
 void() RestartLoopSounds_think = {
